@@ -791,7 +791,7 @@ switch(backcheck){
         rc=document.getElementById("ridestats")
         rb=document.getElementById("back")
         ri=document.getElementById("videos-gallery")
-        rm=document.getElementById("maps")
+        rm=document.getElementById("callmap")
         rcm=document.getElementById("maps")
         backcheck=1;
         rc.style.display = "block";
@@ -799,6 +799,7 @@ switch(backcheck){
         rcm.style.display = "block";
         rb.style.display = "block";
         rcm.style.display = "none";
+        rm.style.display = "block";
         updateride();
         showimage()
         break;
