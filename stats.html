@@ -1,0 +1,80 @@
+<!DOCTYPE html><!--HTMLמפרט את הגרסה של ה-->
+<html lang="en"><!--משמש להצהרה על שפת התוכן של האתר-->
+<head><!--מאפר הגדרות חיוניות-->
+    <meta charset="UTF-8"><!--UTF-8 תג זה אומר לדפדפן שהמסמך מקודד באמצעות-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--תג זה משמש כדי לשלוט בפריסה ובקנה המידה של האטר במכשירים שונים-->
+    <title>Bike</title><!--משמשת ככותרת המוצגת בכרטיסייה של הדפדפן-->
+    <link rel="stylesheet" href="/css/style.css"><!--CSSמקשר בין הדף הזה לדף ה-->
+    <link rel="icon" href="./img/Bicycle-Icon-2.png" type="image/x-icon"><!--מיצר איקון בקרטיסייה-->
+
+
+</head>
+<body><!--מכיל את התוכן היקרי שהמישתמש יכול לירות-->
+    <header><!--משמש להכיל עזרי היכרות או ניווט עבור חלק בדף האינטרנט-->
+    <nav><!--משמש להגדרת קטע של דף אינטרנט המכיל קישורי ניווט-->
+    <ul id="menu"><!-- הוא משמש ליצירת רשימה של פריטים שבהם אין חשיבות לסדר הפריטים עם אלמנת יחודי לזוי-->
+        <li id="disappear" ><a href="rides.html">Rides</a></li><!--Gallery פרית בדוך הרשימה עם אלמנת יחודי המקשר לדפדפן -->
+        <li id="disappear1"><a href="signup.html">Sign Up/Login</a></li><!--signup פרית בדוך הרשימה עם אלמנת יחודי המקשר לדפדפן -->
+        <li id="disappear3"  onclick="logout()"><a href="signup.html">Log Out</a></li><!--stats פרית בדוך הרשימה עם אלמנת יחודי ופולה הקורת לפונקציה המקשר לדפדפן -->
+    </ul>
+    </nav>
+    </header>
+        <div id="map" ></div>
+
+
+        <div class="upper-stats" >
+            <img id="prox" src="img/far.png" width="50px" height="50px" >
+            
+                <img id="direction" src="img/white.png" width="50px" height="50px" style="margin-right: auto;">
+            
+            <div  style="left: 85%;bottom: 50%;"><!--מכל המאפשר לתוכן שבתוכו להיות מושפה מהאלמנת היחודי לו-->
+                <p id="timer">0:00</p><!--משמש להגדרת פסקה עם אלמנת היחודי לו-->
+            </div>
+        </div>
+
+        <div class="bottom-stats">
+           <div class="stats-divider">
+
+                <div  style="margin-right: auto;margin-top: auto;"><!--מכל המאפשר לתוכן שבתוכו להיות מושפה מהאלמנת היחודי לו-->
+                    <div class="heartcontaner">
+                        <img src="img/heart.png" class="heart">
+                        <p id="bpm"></p><!--משמש להגדרת פסקה עם אלמנת היחודי לו-->
+                </div>
+
+                </div>
+                <div style="display:block;">
+                <div class="kmh-box" ><!--מכל המאפשר לתוכן שבתוכו להיות מושפה מהאלמנת היחודי לו-->
+                    <p id="dis" style="color: azure;">0</p><!--משמש להגדרת פסקה עם אלמנת היחודי לו-->
+                </div>
+                <div class="kmh-box" ><!--מכל המאפשר לתוכן שבתוכו להיות מושפה מהאלמנת היחודי לו-->
+                    <p id="kmh" style="color: azure;">0</p><!--משמש להגדרת פסקה עם אלמנת היחודי לו-->
+                </div>
+                </div>
+            </div>
+            <div id="home-buttons" ><!--מכל המאפשר לתוכן שבתוכו להיות מושפה מהאלמנת היחודי לו-->
+                <button id="b1" onclick="StartRide()">Start ride</button><!--מיצר כפתור שקורא לפונקציה שנלחץ-->
+                <button id="stop-button" onclick="StopRide()">Stop ride</button><!--מיצר כפתור שקורא לפונקציה שנלחץ-->
+                <button id="contenue" onclick="StartRide()">Continue</button>
+                <button id="delete" onclick="delride()">Delete ride</button>
+                <button id="saveButton" onclick="EndRide()" >End ride</button><!--מיצר כפתור שקורא לפונקציה שנלחץ-->     
+            </div>
+
+
+
+        </div>
+
+
+        <img id="capturedImage" src="" width="100" height="100" alt="Captured Image">
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script><!--Firebase מאפשר לאתר שלך להשתמש בשירותי -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script><!--Firebase משמש לכלול את אימות-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script><!--Firebaseמשמש לכלול את אחסון -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script><!--Firebaseמשמש לכלול את מסד הנתונים בזמן אמת של -->
+    <script src="./js/script.js"></script><!--javascript משמש ככישור בין האתר לקובץ -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUyg2FC_zDgRCIcvq-4f806ZzjF0o9tRo&">
+</script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
