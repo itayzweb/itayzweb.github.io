@@ -497,7 +497,7 @@ function average(){
     min = JSON.parse(sessionStorage.getItem("minutes"));
     time=sec+min*60
     total=JSON.parse(sessionStorage.getItem("totalkmh"));
-    if(220-bpm<age)
+    if(bpm>=220-age)
         piezo();
     if (rpsmax == null)
         rpsmax = 0;
